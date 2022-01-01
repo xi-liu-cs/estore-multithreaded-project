@@ -1,0 +1,77 @@
+Name: Xi Liu
+net ID: xl3504
+NYU ID(N#): N15017945
+
+Collaborators (who you talked to about the lab, what you talked about):
+none
+
+Source material that you consulted:
+none
+
+Other acknowledgments:
+none
+
+-------------------------------------------------------------------------------
+
+Answers to exercises G1--G3:
+
+G1: 
+
+The command recursively searches all files
+in the directory, then list all files that
+contains the term "smutex" 
+
+vagrant@bullseye:~/cs202/labs-21fa-XiLiu13$ grep -r "smutex"
+lab3/sthread.cpp:void smutex_init(smutex_t *mutex)
+lab3/sthread.cpp:void smutex_destroy(smutex_t *mutex)
+lab3/sthread.cpp:void smutex_lock(smutex_t *mutex)
+lab3/sthread.cpp:void smutex_unlock(smutex_t *mutex)
+lab3/sthread.cpp:void scond_signal(scond_t *cond, smutex_t *mutex __attribute__((unused)))
+lab3/sthread.cpp:void scond_broadcast(scond_t *cond, smutex_t *mutex __attribute__((unused)))
+lab3/sthread.cpp:void scond_wait(scond_t *cond, smutex_t *mutex)
+grep: lab3/build/estoresim: binary file matches
+grep: lab3/build/sthread.o: binary file matches
+lab3/sthread.h:typedef pthread_mutex_t smutex_t;
+lab3/sthread.h:void smutex_init(smutex_t *mutex);
+lab3/sthread.h:void smutex_destroy(smutex_t *mutex);
+lab3/sthread.h:void smutex_lock(smutex_t *mutex);
+lab3/sthread.h:void smutex_unlock(smutex_t *mutex);
+lab3/sthread.h:void scond_signal(scond_t *cond, smutex_t *mutex);
+lab3/sthread.h:void scond_broadcast(scond_t *cond, smutex_t *mutex);
+lab3/sthread.h:void scond_wait(scond_t *cond, smutex_t *mutex);
+
+
+G2:
+
+grep "Task" RequestGenerator.cpp
+
+grep "return" *.h
+
+
+G3: 
+
+it recursively searches all files and it returns
+lines that are functions that contains "smutex"
+they are functions because
+the pattern is smutex.*(.*);
+.* or dot asterisk means any string,
+because of the parentheses and the semicolon,
+the lines are function declarations
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------
+
+Anything else you'd like us to know:
+none
+
+Extra credit exercise(s) (describe what you coded):
+none
